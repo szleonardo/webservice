@@ -1,0 +1,38 @@
+<?php 
+$dados  = $this->getResult();
+
+$U_COMSWR01 = $dados->U_COMSWR01; 
+?>
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Service</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<style type="text/css"></style>
+</head>
+<body>
+	<div id="main">
+
+		<div id="dados" align="center">
+			<table>
+				<tr>
+					<th>carga</th>
+
+				</tr>
+				<?php
+				foreach ($U_COMSWR01 as $SZA => $value) 
+				{
+					echo '<tr class="trCinza">';
+					echo '	<td class="tdCodigo">'.$U_COMSWR01[$SZA]->cargas.'</td>';
+
+					echo '</tr>';
+				}
+				?>
+			</table>
+			</br>
+			
+		</div>
+	</div>
+</body>
+</html>
